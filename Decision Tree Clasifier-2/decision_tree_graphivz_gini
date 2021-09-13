@@ -1,0 +1,20 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="safety <= 2.5\ngini = 0.457\nsamples = 1381\nvalue = [307, 55, 967, 52]\nclass = good", fillcolor="#85c3ef"] ;
+1 [label="persons <= 1.5\ngini = 0.58\nsamples = 919\nvalue = [307, 55, 505, 52]\nclass = good", fillcolor="#bfdff7"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="buying <= 2.5\ngini = 0.617\nsamples = 301\nvalue = [157, 27, 94, 23]\nclass = unacc", fillcolor="#f7d9c3"] ;
+1 -> 2 ;
+3 [label="gini = 0.622\nsamples = 149\nvalue = [83, 27, 16, 23]\nclass = unacc", fillcolor="#f3c5a4"] ;
+2 -> 3 ;
+4 [label="gini = 0.5\nsamples = 152\nvalue = [74, 0, 78, 0]\nclass = good", fillcolor="#f5fafe"] ;
+2 -> 4 ;
+5 [label="persons <= 2.5\ngini = 0.495\nsamples = 618\nvalue = [150, 28, 411, 29]\nclass = good", fillcolor="#91c8f0"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 302\nvalue = [0, 0, 302, 0]\nclass = good", fillcolor="#399de5"] ;
+5 -> 6 ;
+7 [label="gini = 0.639\nsamples = 316\nvalue = [150, 28, 109, 29]\nclass = unacc", fillcolor="#fae6d8"] ;
+5 -> 7 ;
+8 [label="gini = 0.0\nsamples = 462\nvalue = [0, 0, 462, 0]\nclass = good", fillcolor="#399de5"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
